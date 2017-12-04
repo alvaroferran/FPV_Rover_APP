@@ -2,6 +2,7 @@ import socket
 import sys
 import subprocess
 import time
+import webbrowser
 
 
 def mapValues(vx, v1, v2, n1, n2):
@@ -47,6 +48,12 @@ def normalizeValues(aX, aY):
     aY = constrain(aY, -1, 1)
     return (aX, aY)
 
+
+
+
+# Open browser with video stream
+url = "http://192.168.42.1:8080/stream_full.html"
+webbrowser.open_new(url)
 
 # Create socket
 socketClient = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
